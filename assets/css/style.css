@@ -146,15 +146,13 @@ main {
     margin: 5px 0;
 }
 
-#circle-cover-dog {
-    background: url('../images/storm-cute.jpg') no-repeat center center / cover;
-    height: 90vw;
-    width: 90vw;
-    margin-bottom: 20px;
-    /* Makes the square image into a circle */
-    border-radius: 50%;
-    max-width: 300px;
+#circle-cover-dog img {
+   height: 90vw;
+   width: 90vw;
+   border-radius: 50%;
+   max-width: 300px;
     max-height: 300px;
+    display: block;
     margin: 0 auto;
 }
 
@@ -191,9 +189,30 @@ main {
 }
 
 /* Gallery page */
+#gallery {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0 20px;
+    color: #020202;
+}
+
 #photos img {
     width: 100%;
     line-height: 1em;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+    /* Makes the images responsive */
+}
+
+#photos img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #photos {
@@ -314,6 +333,13 @@ main {
         margin: 0 0.5rem;
     }
 
+    #circle-cover-dog {
+        width: 250px;
+        height: 250px;
+        max-width: none;
+        max-height: none;
+    }
+
     /* Main content */
     main {
         /* Push main content down to accommodate larger header */
@@ -374,6 +400,11 @@ main {
         border-bottom: 1px solid #3a3a3a;
     }
 
+    #circle-cover-dog {
+        width: 300px;
+        height: 300px;
+    }
+
     /* Gallery */
     #photos {
         column-count: 4;
@@ -382,6 +413,11 @@ main {
 
 @media screen and (min-width: 1200px) {    
     /* Reasons section */
+    #circle-cover-dog {
+        width: 350px;
+        height: 350px;
+    }
+    
     #benefits {
         display: flex;
         flex-direction: row;
